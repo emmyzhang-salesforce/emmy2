@@ -4,9 +4,11 @@ var express         = require('express'),
     app             = express(),
     port            = Number(process.env.PORT || 3100);
 
-// app.use(express.static('public'));
+app.use(express.static('public'));
 
 app.disable('x-powered-by');
+
+
 
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));

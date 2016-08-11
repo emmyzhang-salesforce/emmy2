@@ -9,9 +9,16 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="/public/style.css">
   </head>
+
+  <style>
+    .content {
+        padding: 20px 100px;
+    }
+
+  </style>
+
   <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -31,6 +38,8 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+    <div class="content">
       {{{body}}}
+    </div>
   </body>
 </html>
