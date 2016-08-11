@@ -8,7 +8,14 @@ var express         = require('express'),
 
 app.disable('x-powered-by');
 
-app.use('/', express.static(__dirname + '/public'));
+
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+app.get('/', function (req, res) {
+    res.render('home');
+});
+
 
 
 console.log('Listening on port ' + port);
