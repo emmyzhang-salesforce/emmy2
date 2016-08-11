@@ -16,6 +16,17 @@ app.get('/', function (req, res) {
     res.render('home');
 });
 
+app.get('/projects', function (req, res) {
+    res.render('projects');
+});
+
+app.get('/thanks', function (req, res) {
+    res.render('thanks');
+});
+
+app.get('/contact', function (req, res) {
+    res.render('contact');
+});
 
 
 console.log('Listening on port ' + port);
