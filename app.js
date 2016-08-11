@@ -6,6 +6,8 @@ var express         = require('express'),
 
 app.disable('x-powered-by');
 
+app.use('/static', express.static('public'));
+
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
