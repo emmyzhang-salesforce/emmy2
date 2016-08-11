@@ -20,6 +20,10 @@ app.get('/projects', function (req, res) {
     res.render('projects');
 });
 
+app.get('/technology', function (req, res) {
+    res.render('technology');
+});
+
 app.get('/thanks', function (req, res) {
     res.render('thanks');
 });
