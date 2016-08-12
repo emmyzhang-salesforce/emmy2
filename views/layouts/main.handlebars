@@ -8,39 +8,54 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
-  </head>
 
-  <style>
-    @@font-face {
-      font-family: SalesforceSans-Regular;
-      src: url(./assets/fonts/SalesforceSans-Regular.ttf);
-    }
-    html, body {
-      font-family: SalesforceSans-Regular;
-    }
-    .content {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    h1{
-      color: #0070d2;
-    }
-    p{
-      line-height: 15px;
-    }
-    p, li {
-      color: #54698d;
-    }
-    a{
-      color: #16325c;
-    }
-    a:hover{
-      text-decoration: none;
-      color: #1589ee;
-    }
-  </style>
+    <!-- Textillate -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="static/js/jquery.lettering.js"></script>
+    <script src="static/js/jquery.textillate.js"></script>
+    <link href="static/css/animate.css" rel="stylesheet">
+  </head>
+    <script>
+      $(function () {
+          $('.tlt').textillate();
+      })
+    </script>
+    <style>
+      @@font-face {
+        font-family: SalesforceSans-Regular;
+        src: url(./assets/fonts/SalesforceSans-Regular.ttf);
+      }
+      html, body {
+        font-family: SalesforceSans-Regular;
+      }
+      .content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      h1{
+        color: #0070d2;
+        -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+        transition: width 2s, height 4s;
+      }
+      p{
+        line-height: 15px;
+      }
+      p, li {
+        color: #54698d;
+      }
+      .thanks li {
+        list-style: none;
+      }
+      a{
+        color: #16325c;
+      }
+      a:hover{
+        text-decoration: none;
+        color: #1589ee;
+      }
+    </style>
 
   <body>
     <nav class="navbar navbar-default">
