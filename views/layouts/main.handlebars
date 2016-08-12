@@ -9,15 +9,17 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
 
-    <!-- Textillate -->
+    <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="static/js/jquery.lettering.js"></script>
-    <script src="static/js/jquery.textillate.js"></script>
-    <link href="static/css/animate.css" rel="stylesheet">
+    <script src="Chart.js"></script>
+
   </head>
     <script>
       $(function () {
-          $('.tlt').textillate();
+          var pageHeight = $("html").height();
+          var navHeight = $(".navbar").outerHeight(true);
+          var contentHeight = pageHeight - navHeight;
+          $(".content").css("height", contentHeight);
       })
     </script>
     <style>
@@ -27,17 +29,17 @@
       }
       html, body {
         font-family: SalesforceSans-Regular;
+        height: 100%;
       }
+
       .content {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       h1{
         color: #0070d2;
-        -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
-        transition: width 2s, height 4s;
       }
       p{
         line-height: 15px;
@@ -45,8 +47,8 @@
       p, li {
         color: #54698d;
       }
-      li {
-        list-decoration: none;
+      .thanks li {
+        list-style: none;
       }
       a{
         color: #16325c;
@@ -58,6 +60,7 @@
     </style>
 
   <body>
+    <div class="all">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -66,10 +69,10 @@
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a style="color: #16325c;" href="/projects">Projects</a></li>
-              <li><a style="color: #16325c;" href="/technology">What I learned</a></li>
-              <li><a style="color: #16325c;" href="/thanks">Thanks</a></li>
-              <li><a style="color: #16325c;" href="/contact">Contact</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/technology">What I learned</a></li>
+              <li><a href="/thanks">Thanks</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -77,5 +80,6 @@
     <div class="content">
       {{{body}}}
     </div>
+  </div>
   </body>
 </html>
